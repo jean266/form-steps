@@ -107,7 +107,7 @@ function step3HTML() {
 // Llama todas las funciones realcionadas con el paso 3
 function functionsStep3() {
   // Consulta los datos de los servicios add-ons
-  const url = `${dominio}/20.2-PROYECTO-email/data/add-ons.json`;
+  const url = `${dominio}/20.2-PROYECTO-email/assets/data/add-ons.json`;
   const data = fetch(url).then((result) => result.json());
   data.then((data) => sprintInfoStep3(data));
 

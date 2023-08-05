@@ -81,6 +81,5 @@ Los usuarios deben ser capaces de:
 
 ## Autor
 
-- Sitio web - [Agregue su nombre aquí] (https://www.your-site.com)
-- Mentor de frontend - [@tunombredeusuario](https://www.frontendmentor.io/profile/tunombredeusuario)
-- Twitter - [@tunombredeusuario](https://www.twitter.com/tunombredeusuario)
+- Mentor de frontend - [@jean266](https://www.frontendmentor.io/profile/jean266)
+
