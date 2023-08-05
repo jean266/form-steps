@@ -8,7 +8,7 @@ function css ( callback ) {
     src("src/scss/**/*.scss") // Identificar el archivo de SASS  
         .pipe( plumber() ) 
         .pipe( sass() ) // Compilarlo
-        .pipe( dest( "build/css") ); // Almacenarla en el disco
+        .pipe( dest( "public/build/css") ); // Almacenarla en el disco
 
     callback();
 }
@@ -17,7 +17,7 @@ function js ( callback ) {
 
     src("src/js/**/*.js")
         .pipe( plumber() )
-        .pipe( dest( "build/js") );
+        .pipe( dest( "public/build/js") );
 
     callback();
 }
