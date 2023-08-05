@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-email",
+  "version": "1.0.0",
+  "description": "Pratica de SASS, HTML, JS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "sass": "^1.64.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}

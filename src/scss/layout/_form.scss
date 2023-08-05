@@ -1,0 +1,418 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 60rem;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 0 3rem;
+  
+  @include m.tablet {
+    margin-top: -10rem;
+    padding: 0;
+    justify-content: space-between;
+    min-height: 90vh;
+    height: max-content;
+    
+
+    .content_form {
+      background-color: v.$alabaster;
+      align-self: center;
+      margin-bottom: 5rem;
+      width: 90%;
+      padding: 2rem 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 2px 1px 15px 0px v.$coolGray;
+
+      .container_thanks {
+        padding: 5rem 0;
+      }
+    }
+  }
+
+  .content_title {
+    margin: 2rem 0;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 4rem;
+    color: v.$marineBlue;
+    font-weight: v.$bold;
+
+    @include m.tablet {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+  }
+  .content_text {
+    color: v.$coolGray;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+
+    @include m.tablet {
+      margin-bottom: 2rem;  
+    }
+  }
+}
+
+// botones
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
+  @include m.tablet {
+    background-color: v.$white;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .btn_back {
+    @include m.boton(v.$white, block);
+    color: v.$coolGray;
+
+    @include m.tablet {
+        margin-top: 0;
+        border-radius : .5rem;
+      }
+      
+      &:hover {
+        color: v.$marineBlue;
+        background-color: v.$white;
+      }
+    }
+    .btn_next {
+      @include m.boton(v.$marineBlue, block);
+      
+      @include m.tablet {
+        margin-top: 0;
+        border-radius: .5rem;
+  }
+
+    &.confirm {
+      background-color: v.$purlishBlue;
+    }
+  }
+}
+
+// step 1
+.form {
+  input {
+    display: block;
+    width: 100%;
+  }
+  label {
+    color: v.$marineBlue;
+    font-weight: v.$semiRegular;
+    margin-bottom: 1rem;
+
+    @include m.tablet {
+     margin-bottom: 0; 
+    }
+  }
+  input {
+    cursor: pointer;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid v.$lightGray;
+    margin-bottom: 3rem;
+    
+    @include m.tablet {
+      border-radius: .5rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+    }
+
+    &::placeholder {
+      color: v.$coolGray;
+      font-weight: v.$semiRegular;
+      font-size: 1.8rem;
+    }
+
+    &:focus-visible {
+      outline: 2px solid v.$purlishBlue;
+    }
+  }
+}
+
+// step 2
+.container_plans {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 2rem;
+
+  @include m.tablet {
+    flex-direction: column;
+  }
+
+  .arcade,
+  .advanced,
+  .pro {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid v.$lightGray;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    @include m.tablet {
+      display: flex;
+      gap: 2rem;
+    }
+
+    img {
+      width: 6rem;
+      margin-bottom: 4rem;
+
+      @include m.tablet {
+        margin-bottom: 0;
+      }
+    }
+    h3 {
+      text-align: left;
+      font-size: 2.3rem;
+      color: v.$marineBlue;
+      font-weight: v.$bold;
+      margin: 0;
+    }
+    P {
+      color: v.$coolGray;
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+
+    &.select {
+      border: 2px solid v.$purlishBlue;
+      background-color: v.$magnolia;
+    }
+
+    .offer_yearly {
+      color: v.$marineBlue;
+      font-weight: v.$semiRegular;
+      margin-top: .5rem;
+      font-size: 1.8rem;
+
+      @include m.tablet {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.container_billing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: v.$magnolia;
+  border-radius: 1rem;
+
+  @include m.tablet {
+    margin-bottom: 2rem;
+}
+
+  p {
+    font-size: 1.8rem;
+    color: v.$coolGray;
+    font-weight: v.$bold;
+
+    &.activo {
+      color: v.$marineBlue;
+    }
+  }
+}
+
+// Step 3
+.container_add-ons {
+  width: 100%;
+
+  .container_adds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    border: 1px solid v.$coolGray;
+    border-radius: 1rem;
+    padding: 3rem;
+    
+    @include m.tablet {
+      padding: 1.5rem 2rem;
+    }
+
+    &.activo {
+      border: 2px solid v.$purlishBlue;
+      background-color: v.$magnolia;
+    }
+
+    .online_service,
+    .larger_storage,
+    .customizable_profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    p {
+      color: v.$marineBlue;
+      font-weight: v.$bold;
+      line-height: 1.4;
+    }
+
+    .price_online,
+    .price_storage,
+    .price_profile {
+      color: v.$purlishBlue;
+      font-weight: v.$semiRegular;
+    }
+
+    .info_add {
+      color: v.$coolGray;
+      font-weight: v.$regular;
+    }
+
+    input {
+      appearance: none;
+      cursor: pointer;
+      min-width: 2.5rem;
+      min-height: 2.5rem;
+      border: 1px solid v.$coolGray;
+      border-radius: 0.5rem;
+      background-color: v.$white;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+
+      &:checked {
+        background-color: v.$purlishBlue;
+      }
+    }
+  }
+
+  #price_online,
+  #price_storage,
+  #price_profile {
+    color: v.$purlishBlue;
+    font-weight: v.$semiRegular;
+  }
+}
+
+// Step 4
+.container_finish {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: v.$magnolia;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 2rem 0;
+
+  .name_plan {
+    color: v.$marineBlue;
+    font-weight: v.$semiRegular;
+  }
+  .change {
+    color: v.$coolGray;
+    text-decoration: underline;
+    display: inline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .price_plan {
+    color: v.$marineBlue;
+    font-weight: v.$bold;
+  }
+}
+.container_services {
+  width: 90%;
+  border-top: 1px solid v.$coolGray;
+  padding: 2rem 0;
+
+  .add_service {
+    display: flex;
+    justify-content: space-between;
+
+    .name_service-add {
+      color: v.$coolGray;
+    }
+    .price_service-add {
+      color: v.$marineBlue;
+      font-weight: v.$delgada;
+    }
+  }
+}
+.container_total {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+
+  .info_total {
+    color: v.$coolGray;
+  }
+  .price_total {
+    color: v.$purlishBlue;
+    font-size: 2rem;
+    font-weight: v.$bold;
+  }
+}
+
+// Step 5
+.container_thanks {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.thank_you {
+  text-align: center;
+  height: max-content;
+  align-self: center;
+
+  img {
+    text-align: center;
+    display: inline;
+    width: 8rem;
+    margin-bottom: 3rem;
+
+    @include m.tablet {
+      width: 6.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    color: v.$marineBlue;
+    font-weight: v.$bold;
+    margin: 0;
+  }
+  p {
+    color: v.$coolGray;
+  }
+}
+
+.container_alert {
+  display: flex;
+  justify-content: space-between;
+
+  .alert {
+    color: v.$strawberryRed;
+  }
+}
+
+.alert_input,
+.form .alert_input:focus-visible {
+  outline: 2px solid v.$strawberryRed;
+}

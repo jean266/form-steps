@@ -1,0 +1,28 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container_toggle {
+    position: relative;
+    background-color: v.$marineBlue;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 4rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .toggle {
+        background-color: v.$white;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        position: absolute;
+        transform: scale(.7);
+
+        &.yearly {
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+
+  "services": {
+    "onlineService": {
+      "id" : 1,
+      "name" : "Online service",
+      "info" : "Access to multiplayer games",
+      "priceMonthly" : "1",
+      "priceYearly" : "10"
+    },
+    "largerStorage": {
+      "id" : 1,
+      "name" : "Larger storage",
+      "info" : "Extra 1TB of cloud save",
+      "priceMonthly" : "2",
+      "priceYearly" : "20"
+    },
+    "customizableProfile": {
+      "id" : 1,
+      "name" : "Customizable profile",
+      "info" : "Custom theme on your profile",
+      "priceMonthly" : "2",
+      "priceYearly" : "20"
+    }
+  }
+
+}

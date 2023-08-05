@@ -1,0 +1,101 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+// global
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 95%;
+    max-width: 110rem;
+    min-height: 60rem;
+    margin: 0 auto;
+    background-color: v.$alabaster;
+    box-shadow: 2px 1px 15px 0px v.$lightGray;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    
+    @include m.tablet {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+      background-color: v.$magnolia;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+}
+
+// hero
+
+.hero {
+  background-image: url(./../../assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 30rem;
+  
+  @include m.tablet {
+    background-image: url(./../../assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+  }
+}
+
+.hero_steps {
+  padding-left: 3rem;
+  
+  @include m.tablet {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    height: 20rem;
+
+    .steps_info {
+      display: none;
+    }
+  }
+
+  .steps {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 3rem;
+    color: v.$alabaster;
+    font-weight: v.$semiRegular;
+
+    @include m.tablet {
+      padding-top: 4rem;
+    }
+
+    span {
+      padding: 1.2rem 1.8rem;
+      border-radius: 50%;
+      border: 1px solid v.$magnolia;
+      font-size: 2rem;
+    }
+  }
+
+  .steps_info {
+    span,
+    p {
+      text-transform: uppercase;
+      border: none;
+      font-size: 1.6rem;
+      padding: 0;
+      color: v.$white;
+    }
+    span {
+      font-weight: v.$delgada;
+      color: v.$coolGray;
+    }
+  }
+}
