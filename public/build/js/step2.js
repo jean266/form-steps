@@ -106,7 +106,7 @@ function step2HTML() {
 function functionsStep2() {
   const plans = document.querySelectorAll(".membership");
 
-  const url = `${dominio}/public/uploads/billing.json`;
+  const url = `${dominio}/public/assets/images/billing.json`;
   const data = fetch(url)
     .then((result) => result.json())
     .catch((error) => console.log(error));
