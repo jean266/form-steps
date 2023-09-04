@@ -31,7 +31,7 @@
             "src" : "assets/icons/Icon_x192.png",
             "type" : "image/png",
             "sizes" : "192x192",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         },
         {
             "src" : "assets/icons/Icon_x384.png",
