@@ -2,12 +2,3 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
-.hero_steps .steps .activo {
-    background-color: v.$pastelBlue;
-    border-color: v.$pastelBlue;
-    color: v.$marineBlue;
-}
-
-.buttons .oculto {
-    visibility: hidden;
-}

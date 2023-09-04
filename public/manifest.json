@@ -1,0 +1,47 @@
+{
+    "name" : "APE",
+    "short_name" : "APE",
+    "start_url" : "/index.html",
+    "display" : "fullscreen",
+    "background_color" : "#483eff",
+    "theme_color" : "#483eff",
+    "orientation" : "portrait",
+    "icons" : [
+        {
+            "src" : "assets/icons/Icon_x48.png",
+            "type" : "image/png",
+            "sizes" : "48x48"
+        },
+        {
+            "src" : "assets/icons/Icon_x72.png",
+            "type" : "image/png",
+            "sizes" : "72x72"
+        },
+        {
+            "src" : "assets/icons/Icon_x96.png",
+            "type" : "image/png",
+            "sizes" : "96x96"
+        },
+        {
+            "src" : "assets/icons/Icon_x128.png",
+            "type" : "image/png",
+            "sizes" : "128x128"
+        },
+        {
+            "src" : "assets/icons/Icon_x192.png",
+            "type" : "image/png",
+            "sizes" : "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src" : "assets/icons/Icon_x384.png",
+            "type" : "image/png",
+            "sizes" : "384x384"
+        },
+        {
+            "src" : "assets/icons/Icon_x512.png",
+            "type" : "image/png",
+            "sizes" : "512x512"
+        }
+    ]
+}
